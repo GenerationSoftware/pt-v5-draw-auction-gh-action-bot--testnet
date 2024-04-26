@@ -1,0 +1,73 @@
+Operating on: 11155420 - Optimism Sepolia
+
+Config - REWARD_RECIPIENT not provided, setting swap recipient to relayer address: 0x06003274c3a7926c04cA8d6903cc691fE8f3CEC2
+Config - MIN_PROFIT_THRESHOLD_USD: 0.1
+
+
+Instantiating RNG contracts ...
+┌──────────────────────┬──────────────────────────────────────────────┐
+│ (index)              │ Values                                       │
+├──────────────────────┼──────────────────────────────────────────────┤
+│ prizePoolContract    │ '0x122FecA66c2b1Ba8Fa9C39E88152592A5496Bc99' │
+│ drawManagerContract  │ '0xcCF00490434D845Ec27cB8B4C05E6356318AafAb' │
+│ rngWitnetContract    │ '0xC74638B72DF8C886F7076ac1c8AA6D65E3c83034' │
+│ rngBlockhashContract │ undefined                                    │
+└──────────────────────┴──────────────────────────────────────────────┘
+
+Gathering info on state of auctions ...
+Getting RNG token and native (gas) token market rates ...
+
+Running draw auction state context multicalls ...
+
+******************
+
+Tokens:
+
+1a. Chain Native/Gas Token ETH Market Rate (USD): $3146.4236
+1b. Reward Token 'WETH' Market Rate (USD): $3146.4236
+
+
+Rng Auction State:
+
+2a. Can Start Draw?  ✔
+2b. Start Draw Expected Reward: 0.00005985814777873 WETH
+2c. Start Draw Expected Reward (USD): $0.19 $0.18833908882328368
+2d. PrizePool (11155420 - Optimism Sepolia) can start draw in: 212.23333333333332 minutes
+
+
+Finish Draw Auction State:
+
+3a. Can Finish Draw?  ✗
+3b. Finish Draw Expected Reward: 0.0 WETH
+3c. Finish Draw Expected Reward (USD): $0 $0
+
+
+
+Processing 'Start Draw' for 11155420 - Optimism Sepolia:
+Estimating RngWitnet#startDraw() gas costs ...
+
+Estimated gas limit (wei): 0.000000000000736676 ETH (736676 wei)
+Recent Gas Price (wei): 0.000000005091381395 ETH (5091381395 wei)
+Recent Gas Price (gwei): 5.091381395 gwei
+
+Gas Cost (USD): $12.42 $12.41992917823707
+
+******************
+
+
+Calculating profit ...
+Profit/Loss (USD):
+
+Gross Profit = Reward
+Net profit = (Gross Profit - Gas Fees [Max] - RNG Fee)
+$-16.95 = ($0.19 - $12.42 - $4.72) $-16.946919095351557 = ($0.18833908882328368 - $12.41992917823707 - $4.715329005937771)
+
+┌──────────────────────────┬───────────┐
+│ (index)                  │ Values    │
+├──────────────────────────┼───────────┤
+│ MIN_PROFIT_THRESHOLD_USD │ '$0.1'    │
+│ Net Profit (USD)         │ '$-16.95' │
+│ Profitable?              │ '✗'       │
+└──────────────────────────┴───────────┘
+
+Completing current auction currently not profitable. Try again soon ...
