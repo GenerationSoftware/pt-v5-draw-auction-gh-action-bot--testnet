@@ -1,0 +1,87 @@
+Operating on: 11155420 - Optimism Sepolia
+
+Config - REWARD_RECIPIENT not provided, setting swap recipient to relayer address: 0x06003274c3a7926c04cA8d6903cc691fE8f3CEC2
+Config - MIN_PROFIT_THRESHOLD_USD: 0.1
+
+
+Instantiating RNG contracts ...
+┌──────────────────────┬──────────────────────────────────────────────┐
+│ (index)              │ Values                                       │
+├──────────────────────┼──────────────────────────────────────────────┤
+│ prizePoolContract    │ '0x122FecA66c2b1Ba8Fa9C39E88152592A5496Bc99' │
+│ drawManagerContract  │ '0xcCF00490434D845Ec27cB8B4C05E6356318AafAb' │
+│ rngWitnetContract    │ '0xC74638B72DF8C886F7076ac1c8AA6D65E3c83034' │
+│ rngBlockhashContract │ undefined                                    │
+└──────────────────────┴──────────────────────────────────────────────┘
+
+Gathering info on state of auctions ...
+Getting RNG token and native (gas) token market rates ...
+
+Running draw auction state context multicalls ...
+
+******************
+
+Tokens:
+
+1a. Chain Native/Gas Token ETH Market Rate (USD): $3265.2817
+1b. Reward Token 'WETH' Market Rate (USD): $3265.2817
+
+
+Rng Auction State:
+
+2a. Can Start Draw?  ✔
+2b. Start Draw Expected Reward: 0.000067520736417167 WETH
+2c. Start Draw Expected Reward (USD): $0.22 $0.22047422499349897
+2d. PrizePool (11155420 - Optimism Sepolia) can start draw in: 208.36666666666667 minutes
+
+
+Finish Draw Auction State:
+
+3a. Can Finish Draw?  ✗
+3b. Finish Draw Expected Reward: 0.0 WETH
+3c. Finish Draw Expected Reward (USD): $0 $0
+
+
+
+Processing 'Start Draw' for 11155420 - Optimism Sepolia:
+Estimating RngWitnet#startDraw() gas costs ...
+
+Estimated gas limit (wei): 0.000000000000737287 ETH (737287 wei)
+Recent Gas Price (wei): 0.000000000001000252 ETH (1000252 wei)
+Recent Gas Price (gwei): 0.001000252 gwei
+
+Gas Cost (USD): $0.01 $0.01125025723318489
+
+******************
+
+
+Calculating profit ...
+Profit/Loss (USD):
+
+Gross Profit = Reward
+Net profit = (Gross Profit - Gas Fees [Max] - RNG Fee)
+$0.19 = ($0.22 - $0.01 - $0.02) $0.1892307614326703 = ($0.22047422499349897 - $0.01125025723318489 - $0.01999320632764377)
+
+┌──────────────────────────┬─────────┐
+│ (index)                  │ Values  │
+├──────────────────────────┼─────────┤
+│ MIN_PROFIT_THRESHOLD_USD │ '$0.1'  │
+│ Net Profit (USD)         │ '$0.19' │
+│ Profitable?              │ '✔'     │
+└──────────────────────────┴─────────┘
+
+Start Draw Transaction:
+Execute rngWitnet#startDraw
+
+Sending ...
+
+
+Transaction sent! ✔
+Transaction hash: 0xc88504e079c95caac639826cb488159bb9961581f9f1e7d6e252aef68e8c8947
+
+|*******************************************************|
+|                                                       |
+|    Rewards accumulate post-draw on the PrizePool!     |
+|  Withdraw your rewards manually from that contract.   |
+|                                                       |
+|*******************************************************|
