@@ -1,11 +1,11 @@
 name: CronJob - Draw Auction Bot - Arbitrum Sepolia
 on:
   schedule:
-    - cron: "*/20 * * * *" # ie. 4:05pm, 4:25pm, 4:45pm ... etc.
+    - cron: "*/10 * * * *" # ie. 4:05pm, 4:15pm, 4:25pm ... etc.
   push:
 env:
   CHAIN_ID: 421614
-  MIN_PROFIT_THRESHOLD_USD: 0.01
+  MIN_PROFIT_THRESHOLD_USD: -2.01
   REWARD_RECIPIENT: ''
   JSON_RPC_URL: ${{ secrets.ARBITRUM_SEPOLIA_JSON_RPC_URL }}
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
