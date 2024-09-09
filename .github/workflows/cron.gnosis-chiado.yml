@@ -1,7 +1,7 @@
 name: CronJob - Draw Auction Bot - Gnosis Chiado
 on:
   schedule:
-    - cron: "*/10 * * * *" # ie. 4:05pm, 4:15pm, 4:25pm ... etc.
+    - cron: "*/2 * * * *" # ie. 4:02pm, 4:04pm, 4:06pm ... etc.
   push:
 env:
   CHAIN_ID: 10200
