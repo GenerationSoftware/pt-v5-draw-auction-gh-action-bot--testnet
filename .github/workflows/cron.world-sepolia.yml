@@ -1,17 +1,17 @@
-name: CronJob - Draw Auction Bot - Gnosis Chiado
+name: CronJob - Draw Auction Bot - World Sepolia
 on:
   schedule:
     - cron: "*/2 * * * *" # ie. 4:02pm, 4:04pm, 4:06pm ... etc.
   push:
 env:
-  CHAIN_ID: 10200
+  CHAIN_ID: 4801
   MIN_PROFIT_THRESHOLD_USD: -0.20
   REWARD_RECIPIENT: ''
   ERROR_STATE_MAX_GAS_COST_THRESHOLD_USD: 1
-  JSON_RPC_URL: ${{ secrets.GNOSIS_CHIADO_JSON_RPC_URL }}
+  JSON_RPC_URL: ${{ secrets.WORLD_SEPOLIA_JSON_RPC_URL }}
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
-  CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-testnet/25f544537f232912bc2a266c0b2a621e6772dd07/deployments/gnosisChiado/contracts.json'
+  CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-testnet/82c266dc50264117bc82d48dacfff1172df2197b/deployments/worldSepolia/contracts.json'
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
 jobs:
